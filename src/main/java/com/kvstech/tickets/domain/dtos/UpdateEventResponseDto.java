@@ -1,0 +1,27 @@
+package com.kvstech.tickets.domain.dtos;
+
+import com.kvstech.tickets.domain.entities.EventStatusEnum;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.UUID;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class UpdateEventResponseDto {
+    private UUID id;
+    private String name;
+    private String venue;
+    private LocalDateTime startDate;
+    private LocalDateTime endDate;
+    private LocalDateTime salesStart;
+    private LocalDateTime salesEnd;
+    private EventStatusEnum status;
+    private List<UpdateTicketTypeResponseDto> ticketTypes;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
+}
